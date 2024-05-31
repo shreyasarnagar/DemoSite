@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+
+.navright{
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown{
+    position: relative;
+    display: inline;
+}
+
+.dropdowncontent{
+    display: none;
+    position: absolute;
+    background-color: maroon;
+    min-width: 160px;
+    box-shadow: 1px 8px 16px 1px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdowncontent a{
+    color: wheat;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdowncontent a:hover{
+    background-color: turquoise;
+}
+
+.dropdown:hover .dropdowncontent{
+    display: block;
+}
+
+.nav h2{
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+.nav a{
+    font-size: 1.5vw;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 0.6em 1.1em;
+    border-radius: 4px;
+}
+
+.nav a:hover{
+    background-color: pink;
+}
+
+#p2{
+    align-items: center;
+    font-weight: 600;
+    display: none;
+}
+
+.content{
+    height: calc(100% - 100px);
+    width: 100%;
+    background-color: burlywood;
+    display: flex;
+}
+
+#left{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: rosybrown;
+}
+
+#right{
+    width: 60%;
+    height: 100%;
+    background-color: grey;
+}
+
+#rtop{
+    width: 100%;
+    height: 50%;
+    background-color: antiquewhite;
+    display: flex;
+}
+
+#rbottom{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-image: url(//shotkit.com/wp-content/uploads/2020/07/camera-hacks.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#rtopleft{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image: url(https://img.freepik.com/premium-photo/flatlay-laptop-computer-gentle-peony-flower-casting-sunlight-shadow-peach-background-top-view-minimalist-aesthetic-work-business-concept_408798-10741.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+#rtopright{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-image: url(https://itsm.tools/wp-content/uploads/2018/05/machine-learning.gif);
+    background-size: cover;
+    background-position: center;
+}
+
+#right a{
+    position: absolute;
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s ease ;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    margin: 1vw;
+}
+
+#right a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+#lnav{
+    display: flex;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+
+#lnavr{
+    display: flex;
+    align-items: center;
+}
+
+#lnavr a{
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s ease ;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+}
+
+#lnavr a:hover{
+    background-color: black;
+    color: white;
+}
+
+#left #textcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#textcenter h1{
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#textcenter h2{
+    opacity: 0.8;
+}
+
+#textcenter p{
+    opacity: 0.6;
+    font-size: 10px;
+    line-height: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#textcenter a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+#textcenter a:hover{
+    opacity: 1;
+    font-weight: 400;
+    font-size: 3vw;
+}
+
+@media(max-width: 600px){
+    .content{
+        flex-direction: column;
+    }
+
+    .content #left{
+        width: 100%;
+        position: relative;
+    }
+    .content #right{
+        width: 100%;
+    }
+
+    .content #left #textcenter{
+        font-size: 6vw;
+        position: absolute;
+        top: 60%;
+    }
+
+    .content #textcenter h1{
+        font-size: 8vw;
+    }
+
+    .content #textcenter h2{
+        font-size: 4vw;
+    }
+
+    .content #textcenter p{
+        font-size: 2vw;
+        line-height: 8px;
+        margin-top: 5px;
+        margin-bottom: 0.5px;
+    }
+
+    #textcenter a{
+        text-decoration: none;
+        color: black;
+        border-bottom: 1px solid black;
+        font-weight: 300;
+        opacity: 0.6;
+        font-size: 2.5vw;
+    }
+
+    .nav{
+        height: 60px;
+    }
+
+    .nav h2{
+        font-size: 6vw;
+    }
+
+    .navright{
+        display: none;
+    }    
+
+    #p2{
+        display: block;
+    }
+}
+
