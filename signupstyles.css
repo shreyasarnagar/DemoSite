@@ -14,13 +14,14 @@ body {
     background-image: url(https://static.vecteezy.com/system/resources/previews/006/665/708/original/graphic-of-geometry-pattern-design-with-dark-blue-light-blue-yellow-purple-and-white-color-scheme-perfect-for-pattern-of-textile-industry-vector.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 main {
-    background-color: yellow;
+    background-color: rgb(238, 199, 71);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -54,16 +55,30 @@ form > div {
     margin-bottom: 0.5em;
 }
 
-main button {
+main #done {
     padding: 10px;
     align-items: center;
     border-radius: 3px;
     background-color: #46e378;
     color: #fff;
+    
 }
 
-main button:hover {
+main #done:hover {
     background-color: #20b867;
+}
+
+main a {
+    padding: 10px;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #32a6f4;
+    color: #fff;
+    text-decoration: none;
+}
+
+main a:hover {
+    background-color: #458dbe;
 }
 
 input:focus:invalid {
